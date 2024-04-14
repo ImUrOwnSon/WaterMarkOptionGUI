@@ -1,0 +1,72 @@
+-- Instances
+
+local WaterMark = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Main = Instance.new("TextLabel")
+local Africa = Instance.new("TextLabel")
+local UIScale = Instance.new("UIScale")
+
+-- Properties
+
+WaterMark.Name = "WaterMark"
+WaterMark.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = WaterMark
+Frame.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.192157)
+Frame.BorderColor3 = Color3.new(1, 1, 1)
+Frame.Position = UDim2.new(0, 0, 0.11733333, 0)
+Frame.Size = UDim2.new(0, 156, 0, 26)
+
+Main.Name = "Main"
+Main.Parent = Frame
+Main.BackgroundColor3 = Color3.new(1, 1, 1)
+Main.BackgroundTransparency = 1
+Main.BorderColor3 = Color3.new(0, 0, 0)
+Main.BorderSizePixel = 2
+Main.Position = UDim2.new(-0.0606060624, 0, 0.0840457007, 0)
+Main.Size = UDim2.new(0, 148, 0, 20)
+Main.Font = Enum.Font.Roboto
+Main.Text = "ACOG >_<  |"
+Main.TextColor3 = Color3.new(1, 1, 1)
+Main.TextScaled = true
+Main.TextSize = 14
+Main.TextWrapped = true
+
+Africa.Name = "Africa"
+Africa.Parent = Frame
+Africa.BackgroundColor3 = Color3.new(1, 1, 1)
+Africa.BackgroundTransparency = 1
+Africa.BorderColor3 = Color3.new(0, 0, 0)
+Africa.BorderSizePixel = 0
+Africa.Position = UDim2.new(0.574653745, 0, 0.0840454102, 0)
+Africa.Size = UDim2.new(0, 78, 0, 20)
+Africa.Font = Enum.Font.Roboto
+Africa.Text = "60"
+Africa.TextColor3 = Color3.new(1, 1, 1)
+Africa.TextScaled = true
+Africa.TextSize = 14
+Africa.TextWrapped = true
+
+UIScale.Parent = Frame
+
+-- Scripts
+
+local function XTOOH_fake_script() -- Africa.LocalScript 
+	local script = Instance.new('LocalScript', Africa)
+
+	game:GetService("RunService").RenderStepped:Connect(function(TimeBetween)
+		local FPS = math.floor(1/TimeBetween)
+		script.Parent.Text = " "..FPS
+	
+	end)
+end
+coroutine.wrap(XTOOH_fake_script)()
+local function BDRGCX_fake_script() -- WaterMark.pluh 
+	local script = Instance.new('LocalScript', WaterMark)
+
+	frame = script.Parent.Frame
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+end
+coroutine.wrap(BDRGCX_fake_script)()
