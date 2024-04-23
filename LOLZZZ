@@ -13,7 +13,8 @@ WaterMark.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Frame.Parent = WaterMark
 Frame.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.192157)
-Frame.BorderColor3 = Color3.new(1, 1, 1)
+Frame.BorderColor3 = Color3.new(0.666667, 0.333333, 1)
+Frame.BorderSizePixel = 2
 Frame.Position = UDim2.new(0, 0, 0.11733333, 0)
 Frame.Size = UDim2.new(0, 156, 0, 26)
 
@@ -51,7 +52,7 @@ UIScale.Parent = Frame
 
 -- Scripts
 
-local function XTOOH_fake_script() -- Africa.LocalScript 
+local function TWKRFK_fake_script() -- Africa.LocalScript 
 	local script = Instance.new('LocalScript', Africa)
 
 	game:GetService("RunService").RenderStepped:Connect(function(TimeBetween)
@@ -60,8 +61,8 @@ local function XTOOH_fake_script() -- Africa.LocalScript
 	
 	end)
 end
-coroutine.wrap(XTOOH_fake_script)()
-local function BDRGCX_fake_script() -- WaterMark.pluh 
+coroutine.wrap(TWKRFK_fake_script)()
+local function ZHYLHQA_fake_script() -- WaterMark.pluh 
 	local script = Instance.new('LocalScript', WaterMark)
 
 	frame = script.Parent.Frame
@@ -69,4 +70,4 @@ local function BDRGCX_fake_script() -- WaterMark.pluh
 	frame.Selectable = true
 	frame.Active = true
 end
-coroutine.wrap(BDRGCX_fake_script)()
+coroutine.wrap(ZHYLHQA_fake_script)()
